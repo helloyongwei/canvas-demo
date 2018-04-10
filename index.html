@@ -2,18 +2,40 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>JS Bin</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
+  maximum-scale=1.0, minimum-scale=1.0">
+  <title>我的画板</title>
+  <link rel="stylesheet" href="./style.css">
   
 </head>
 
 <body>
   <canvas id="canvas" width=300 height=300></canvas>
   <div id=actions class="actions">
-    <button id=eraser>橡皮擦</button>
-    <button id=brush>画笔</button>
+    <svg id=pen class="icon" aria-hidden="true">
+      <use xlink:href="#icon-pen"></use>
+    </svg>
+    <svg id=eraser class="icon" aria-hidden="true">
+      <use xlink:href="#icon-eraser"></use>
+    </svg>
+    <svg id=clear class="icon">
+      <use xlink:href="#icon-lajixiang"></use>
+    </svg>
+    <svg id=download class="icon">
+      <use xlink:href="#icon-download"></use>
+    </svg>
   </div>
-  <script src="main.js"></script>
+  <ol class="colors">
+    <li id="red" class="red active"></li>
+    <li id="green" class="green"></li>
+    <li id="blue" class="blue"></li>
+  </ol>
+  <ol class="sizes">
+    <li id="thin" class="thin"></li>
+    <li id="thick" class="thick"></li>
+  </ol>
+  <script src="./main.js"></script>
+  <script src="//at.alicdn.com/t/font_622599_31u7tw41s8aor.js"></script>
 </body>
 
 </html>
